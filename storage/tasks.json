@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "titulo": "Estudar Estruturas de Dados",
+        "status": "Pendente",
+        "descricao": "Esta é a descrição detalhada da sua tarefa. Aqui você pode adicionar todas as informações necessárias para completar a task com sucesso. Inclua detalhes, referências, links úteis e qualquer outro conteúdo relevante.Aqui você pode adicionar todas as informações necessárias para completar a task com sucesso. Inclua detalhes, referências, links úteis e qualquer outro conteúdo relevante.Aqui você pode adicionar todas as informações necessárias para completar a task com sucesso. Inclua detalhes, referências, links úteis e qualquer outro conteúdo relevante.Aqui você pode adicionar todas as informações necessárias para completar a task com sucesso. Inclua detalhes, referências, links úteis e qualquer outro conteúdo relevante.Aqui você pode adicionar todas as informações necessárias para completar a task com sucesso. Inclua detalhes, referências, links úteis e qualquer outro conteúdo relevante. "
+    },
+    {
+        "id": 2,
+        "titulo": "Finalizar protótipo no Figma",
+        "status": "Em andamento",
+        "descricao": ""
+    },
+    {
+        "id": 3,
+        "titulo": "Revisar código do projeto",
+        "status": "Concluído",
+        "descricao": ""
+    }
+]

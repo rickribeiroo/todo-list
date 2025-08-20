@@ -1,0 +1,9 @@
+{
+  "status": [
+    {"id": 1, "nome": "Pendente"},
+    {"id": 2, "nome": "Concluído"},
+    {"id": 3, "nome": "Em andamento"},
+    {"id": 4, "nome": "Cancelado"},
+    {"id": 5, "nome": "Atrasado"}
+  ]
+}
