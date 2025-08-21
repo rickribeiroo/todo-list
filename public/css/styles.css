@@ -1,0 +1,78 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #111113;
+    padding: 30px 80px 10px 80px;
+}
+.título {
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    border: 10px solid #111113;
+}
+h1 {
+    color: white;
+    font-weight: 500;
+    font-size: 40px;
+}
+#list{
+    color: #805CF6;
+}
+#tarefas{
+    font-size: 30px;
+    padding-left: 20px;
+    color: #9994D6;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #2F2D37;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+li .info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+li .botoes-li {
+    display: flex;
+    gap: 5px;
+}
+
+li.done {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.botoes{
+    background-color: #19191C;
+    padding: 50px;
+    border-radius: 40px;
+    color: white;
+}
+button.concluir, button.editar, button.deletar {
+    border: none;
+    cursor: pointer;
+    background: #2F2D37;
+    padding: 5px;
+    margin-left: 5px;
+    font-size: 18px;
+    color: #8583A0;
+}
+
+button.deletar {
+    color: #9994D6;
+}
