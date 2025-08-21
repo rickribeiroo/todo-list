@@ -25,7 +25,9 @@ $tasks = json_decode(file_get_contents(__DIR__ . '/../storage/tasks.json'), true
                 <span>(<?= $task['status'] ?>)</span>
               </div>
               <div class="botoes-li">
-                <button class="editar"><i class="bi bi-pencil-square"></i></button>
+                <button class="editar" onclick="window.location.href='/app/Views/tasks/update_task.php?id=<?= $task['id'] ?>'">
+                <i class="bi bi-pencil-square"></i>
+                </button>
                 <button class="deletar"><i class="bi bi-x-lg"></i></button>
               </div>
             </li>
