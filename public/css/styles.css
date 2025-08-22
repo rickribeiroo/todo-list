@@ -55,6 +55,7 @@ li .botoes-li {
 li.done {
     text-decoration: line-through;
     color: gray;
+    opacity: 0.7; /* Diminui a opacidade em 30% */
 }
 
 .botoes{
@@ -75,13 +76,16 @@ button.concluir, button.editar, button.deletar {
 button.deletar {
     color: #9994D6;
 }
-botao-adicionar {
-  color: white; 
-  text-decoration: none; 
-  background: #2F2D37; 
-  border-radius: 1000px;
-  padding: 5px;
+
+/* Corrigindo typo e integrando button.adicionar */
+button.adicionar {
+    color: white;
+    text-decoration: none;
+    background: #2F2D37;
+    border-radius: 1000px;
+    padding: 5px;
 }
+
 .search-container {
     display: flex;
     justify-content: center;
@@ -105,6 +109,25 @@ botao-adicionar {
     color: #8583A0;
     cursor: pointer;
 }
+
+/* Estilos adicionais para o botão concluir */
+button.concluir:hover {
+    color: #6A47D1; /* Cor ao passar o mouse, harmonizando com o tema */
+    transition: color 0.3s ease;
+}
+
+/* Garante que o ícone bi-circle seja visível e interativo */
+button.concluir i.bi-circle {
+    font-size: 18px; /* Ajuste o tamanho para consistência com outros botões */
+}
+
+/* Ajuste para li.pending para diferenciar visualmente de done */
+li.pending .info {
+    text-decoration: none;
+    color: #F9F9F9; /* Cor padrão para tarefas pendentes */
+}
+
+/* Estilos da branch remota */
 .cabecalho-tarefas {
     display: flex;
     justify-content: space-between;
@@ -131,7 +154,6 @@ botao-adicionar {
 }
 
 /* Css da página add_task */
-/* Pagina de adicionar tarefa */
 .form-adicionar {
     display: flex;
     flex-direction: column;
@@ -194,4 +216,3 @@ botao-adicionar {
 .btn-adicionar-form:hover {
     background-color: #6B46E1;
 }
-
