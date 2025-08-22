@@ -55,6 +55,7 @@ li .botoes-li {
 li.done {
     text-decoration: line-through;
     color: gray;
+    opacity: 0.7; /* Diminui a opacidade em 30% */
 }
 
 .botoes{
@@ -98,4 +99,21 @@ button.deletar {
     background: #2F2D37;
     color: #8583A0;
     cursor: pointer;
+}
+
+/* Estilos adicionais para o botão concluir */
+button.concluir:hover {
+    color: #6A47D1; /* Cor ao passar o mouse, harmonizando com o tema */
+    transition: color 0.3s ease;
+}
+
+/* Garante que o ícone bi-circle seja visível e interativo */
+button.concluir i.bi-circle {
+    font-size: 18px; /* Ajuste o tamanho para consistência com outros botões */
+}
+
+/* Ajuste para li.pending para diferenciar visualmente de done */
+li.pending .info {
+    text-decoration: none;
+    color: #F9F9F9; /* Cor padrão para tarefas pendentes */
 }
