@@ -1,19 +1,19 @@
 [
     {
         "id": 2,
-        "titulo": "Finalizar prot\u00f3tipo no Figma",
-        "status": "Conclu\u00eddo",
+        "titulo": "Finalizar protótipo no Figma",
+        "status": "Concluído",
         "descricao": ""
     },
     {
         "id": 3,
-        "titulo": "Revisar c\u00f3digo do projeto",
+        "titulo": "Revisar código do projeto",
         "status": "Pendente",
         "descricao": ""
     },
     {
         "id": 4,
-        "titulo": "Revisar c\u00f3digo do projeto TODO.lisst",
+        "titulo": "Revisar código do projeto TODO.lisst",
         "status": "Pendente",
         "descricao": ""
     }
