@@ -1,5 +1,13 @@
 <?php
 $tasks = json_decode(file_get_contents(__DIR__ . '/../storage/tasks.json'), true);
+
+// Filtro de busca
+$search = $_GET['search'] ?? '';
+if ($search) {
+    $tasks = array_filter($tasks, function ($task) use ($search) {
+        return stripos($task['titulo'], $search) !== false;
+    });
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -9,14 +17,30 @@ $tasks = json_decode(file_get_contents(__DIR__ . '/../storage/tasks.json'), true
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function confirmDelete(id) {
+            if (confirm('Tem certeza que deseja excluir esta tarefa?')) {
+                window.location.href = 'delete.php?id=' + id;
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="título">
       <h1 id="todo">TODO</h1>
       <h1 id="list">.list</h1>
     </div>
+
+    <!-- Barra de pesquisa -->
+    <div class="search-container">
+        <form method="GET" action="">
+            <input type="text" name="search" placeholder="Buscar tarefa..." value="<?= htmlspecialchars($search) ?>">
+            <button type="submit"><i class="bi bi-search"></i></button>
+        </form>
+    </div>
+
     <ul class="botoes">
-      <p id= "tarefas" >Tarefas<p>
+      <p id="tarefas">Tarefas</p>
         <?php foreach ($tasks as $task): ?>
             <li class="<?= $task['status'] === 'feito' ? 'done' : 'pending' ?>">
               <div class="info">
@@ -26,9 +50,11 @@ $tasks = json_decode(file_get_contents(__DIR__ . '/../storage/tasks.json'), true
               </div>
               <div class="botoes-li">
                 <button class="editar" onclick="window.location.href='/app/Views/tasks/update_task.php?id=<?= $task['id'] ?>'">
-                <i class="bi bi-pencil-square"></i>
+                    <i class="bi bi-pencil-square"></i>
                 </button>
-                <button class="deletar"><i class="bi bi-x-lg"></i></button>
+                <button class="deletar" onclick="confirmDelete(<?= $task['id'] ?>)">
+                    <i class="bi bi-x-lg"></i>
+                </button>
               </div>
             </li>
         <?php endforeach; ?>
