@@ -8,6 +8,26 @@ if ($search) {
         return stripos($task['titulo'], $search) !== false;
     });
 }
+
+// 🔹 Função para concluir (ou alternar status)
+if (isset($_GET['action']) && $_GET['action'] === 'concluir' && isset($_GET['id'])) {
+    $id = (int) $_GET['id'];
+
+    foreach ($tasks as &$task) {
+        if ($task['id'] === $id) {
+            // Alterna entre Pendente e Concluído
+            $task['status'] = ($task['status'] === 'Concluído') ? 'Pendente' : 'Concluído';
+            break;
+        }
+    }
+
+    // Salva no arquivo JSON
+    file_put_contents(__DIR__ . '/../storage/tasks.json', json_encode($tasks, JSON_PRETTY_PRINT));
+
+    // Redireciona para evitar reenvio da ação
+    header("Location: index.php");
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -23,6 +43,25 @@ if ($search) {
                 window.location.href = 'delete.php?id=' + id;
             }
         }
+
+        // Função para atualizar o ícone do botão com base no status
+        function updateIcon() {
+            document.querySelectorAll('.concluir').forEach(button => {
+                const taskId = button.getAttribute('data-id');
+                const statusSpan = button.closest('li').querySelector('span');
+                const status = statusSpan ? statusSpan.textContent.replace('(', '').replace(')', '').trim() : '';
+
+                const icon = button.querySelector('i');
+                if (status === 'Concluído') {
+                    icon.className = 'bi bi-check-circle';
+                } else {
+                    icon.className = 'bi bi-circle';
+                }
+            });
+        }
+
+        // Chama a função ao carregar a página
+        window.onload = updateIcon;
     </script>
 </head>
 <body>
@@ -47,9 +86,11 @@ if ($search) {
         </button>
       </div>
         <?php foreach ($tasks as $task): ?>
-            <li class="<?= $task['status'] === 'feito' ? 'done' : 'pending' ?>">
+            <li class="<?= $task['status'] === 'Concluído' ? 'done' : 'pending' ?>">
               <div class="info">
-                <button class="concluir"><i class="bi bi-circle"></i></button>
+                <button class="concluir" data-id="<?= $task['id'] ?>" onclick="window.location.href='?action=concluir&id=<?= $task['id'] ?>'">
+                    <i class="bi bi-circle"></i>
+                </button>
                 <?= htmlspecialchars($task['titulo']) ?>
                 <span>(<?= $task['status'] ?>)</span>
               </div>
