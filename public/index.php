@@ -42,7 +42,7 @@ if ($search) {
     <ul class="botoes">
       <div class="cabecalho-tarefas">
         <p id="tarefas">Tarefas</p>
-        <button class="btn-adicionar" onclick="window.location.href='/app/Views/tasks/add_task.php'">
+        <button class="btn-adicionar" onclick="window.location.href='add_task.php'">
           <i class="bi bi-plus-lg"></i> Adicionar Tarefa
         </button>
       </div>

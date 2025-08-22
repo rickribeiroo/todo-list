@@ -123,3 +123,66 @@ button.deletar {
 .btn-adicionar:hover {
     background-color: #6B46E1;
 }
+/* Pagina de adicionar tarefa */
+.form-adicionar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-adicionar input {
+    background: #2F2D37;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-adicionar input::placeholder {
+    color: #8583A0;
+}
+
+.form-adicionar input:focus {
+    outline: 2px solid #805CF6;
+}
+
+.botoes-form {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.btn-cancelar {
+    background-color: transparent;
+    color: #9994D6;
+    border: 2px solid #9994D6;
+    padding: 12px 25px;
+    border-radius: 1000px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    transition: all 0.3s;
+}
+
+.btn-cancelar:hover {
+    background-color: #9994D6;
+    color: white;
+}
+
+.btn-adicionar-form {
+    background-color: #805CF6;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 1000px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.btn-adicionar-form:hover {
+    background-color: #6B46E1;
+}
