@@ -24,7 +24,7 @@ if (!$task) {
 }
 
 $currentStatus = $task['status'];
-$description = $task['descricao'] ?? '';
+$description = $task['descricao'] ?? 'Sem descrição.';
 
 // Filtra os status disponíveis, removendo o status atual
 $availableStatuses = array_filter($statuses, function($s) use ($currentStatus) {
@@ -45,36 +45,36 @@ $availableStatuses = array_filter($statuses, function($s) use ($currentStatus) {
 <body>
     <div class="task-container">
         <div class="task-card">
-            <form action="/public/index.php" method="POST">
-                <input type="hidden" name="id" value="<?= $task['id'] ?>">
-                <input type="hidden" id="statusInput" name="status" value="<?= $currentStatus ?>">
+            <!-- Alterar action para apontar para a rota correta -->
+            <form action="/app/Controllers/updater.php" method="POST">
+            <input type="hidden" name="id" value="<?= $task['id'] ?>">
+            <input type="hidden" id="statusInput" name="status" value="<?= $currentStatus ?>">
+            
+            <div class="task-title"><?= $task['titulo'] ?></div>
 
-                <div class="task-title"><?= $task['titulo'] ?></div>
+            <div class="dropdown task-status">
+                <button id="taskStatusBtn" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <?= $currentStatus ?>
+                </button>
+                <ul class="dropdown-menu">
+                    <?php foreach ($availableStatuses as $status): ?>
+                        <li>
+                            <a class="dropdown-item" href="#" data-status="<?= $status['nome'] ?>">
+                                <?= $status['nome'] ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
 
-                <div class="dropdown task-status">
-                    <button id="taskStatusBtn" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <?= $currentStatus ?>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <?php foreach ($availableStatuses as $status): ?>
-                            <li>
-                                <a class="dropdown-item" href="#" data-status="<?= $status['nome'] ?>">
-                                    <?= $status['nome'] ?>
-                                </a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </div>
+            <div class="task-description-container">
+                <textarea class="task-description" name="descricao"><?= $task['descricao'] ?></textarea>
+            </div>
 
-                <div class="task-description-container">
-                    <textarea class="task-description" name="descricao"><?= $task['descricao'] ?></textarea>
-                </div>
-
-                <div class="task-actions">
-                    <button type="submit" class="btn btn-save">Salvar</button>
-                </div>
-            </form>
-
+            <div class="task-actions">
+                <button type="submit" class="btn btn-save">Salvar</button>
+            </div>
+        </form>
         </div>
     </div>
 
