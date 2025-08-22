@@ -81,6 +81,7 @@ botao-adicionar {
   background: #2F2D37; 
   border-radius: 1000px;
   padding: 5px;
+}
 .search-container {
     display: flex;
     justify-content: center;
@@ -193,4 +194,4 @@ botao-adicionar {
 .btn-adicionar-form:hover {
     background-color: #6B46E1;
 }
-}
+
