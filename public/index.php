@@ -40,7 +40,12 @@ if ($search) {
     </div>
 
     <ul class="botoes">
-      <p id="tarefas">Tarefas</p>
+      <div class="cabecalho-tarefas">
+        <p id="tarefas">Tarefas</p>
+        <button class="btn-adicionar" onclick="window.location.href='/app/Views/tasks/add_task.php'">
+          <i class="bi bi-plus-lg"></i> Adicionar Tarefa
+        </button>
+      </div>
         <?php foreach ($tasks as $task): ?>
             <li class="<?= $task['status'] === 'feito' ? 'done' : 'pending' ?>">
               <div class="info">
