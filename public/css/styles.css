@@ -76,3 +76,26 @@ button.concluir, button.editar, button.deletar {
 button.deletar {
     color: #9994D6;
 }
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-container input {
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #2F2D37;
+    background-color: #19191C;
+    color: white;
+    outline: none;
+}
+
+.search-container button {
+    padding: 10px 15px;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    background: #2F2D37;
+    color: #8583A0;
+    cursor: pointer;
+}
