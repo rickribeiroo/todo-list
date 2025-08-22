@@ -76,17 +76,20 @@ button.concluir, button.editar, button.deletar {
 button.deletar {
     color: #9994D6;
 }
-botao-adicionar {
-  color: white; 
-  text-decoration: none; 
-  background: #2F2D37; 
-  border-radius: 1000px;
-  padding: 5px;
-    .search-container {
-        display: flex;
-        justify-content: center;
-        margin: 20px 0;
-    }
+
+/* Corrigindo typo e integrando button.adicionar */
+button.adicionar {
+    color: white;
+    text-decoration: none;
+    background: #2F2D37;
+    border-radius: 1000px;
+    padding: 5px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .search-container input {
@@ -107,7 +110,6 @@ botao-adicionar {
     cursor: pointer;
 }
 
-
 /* Estilos adicionais para o botão concluir */
 button.concluir:hover {
     color: #6A47D1; /* Cor ao passar o mouse, harmonizando com o tema */
@@ -125,6 +127,7 @@ li.pending .info {
     color: #F9F9F9; /* Cor padrão para tarefas pendentes */
 }
 
+/* Estilos da branch remota */
 .cabecalho-tarefas {
     display: flex;
     justify-content: space-between;
@@ -151,7 +154,6 @@ li.pending .info {
 }
 
 /* Css da página add_task */
-/* Pagina de adicionar tarefa */
 .form-adicionar {
     display: flex;
     flex-direction: column;
@@ -214,4 +216,3 @@ li.pending .info {
 .btn-adicionar-form:hover {
     background-color: #6B46E1;
 }
-
