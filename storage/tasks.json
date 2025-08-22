@@ -1,11 +1,5 @@
 [
     {
-        "id": 1,
-        "titulo": "Estudar Estruturas de Dados",
-        "status": "Pendente",
-        "descricao": "Esta \u00e9 a descri\u00e7\u00e3o detalhada da sua tarefa. Aqui voc\u00ea pode adicionar todas as informa\u00e7\u00f5es necess\u00e1rias para completar a task com sucesso. Inclua detalhes, refer\u00eancias, links \u00fateis e qualquer outro conte\u00fado relevante.Aqui voc\u00ea pode adicionar todas as informa\u00e7\u00f5es necess\u00e1rias para completar a task com sucesso. Inclua detalhes, refer\u00eancias, links \u00fateis e qualquer outro conte\u00fado relevante.Aqui voc\u00ea pode adicionar todas as informa\u00e7\u00f5es necess\u00e1rias para completar a task com sucesso. Inclua detalhes, refer\u00eancias, links \u00fateis e qualquer outro conte\u00fado relevante.Aqui voc\u00ea pode adicionar todas as informa\u00e7\u00f5es necess\u00e1rias para completar a task com sucesso. Inclua detalhes, refer\u00eancias, links \u00fateis e qualquer outro conte\u00fado relevante.Aqui voc\u00ea pode adicionar todas as informa\u00e7\u00f5es necess\u00e1rias para completar a task com sucesso. Inclua detalhes, refer\u00eancias, links \u00fateis e qualquer outro conte\u00fado relevante. "
-    },
-    {
         "id": 2,
         "titulo": "Finalizar prot\u00f3tipo no Figma",
         "status": "Em andamento",
@@ -22,10 +16,5 @@
         "titulo": "Revisar c\u00f3digo do projeto TODO.lisst",
         "status": "Pendente",
         "descricao": ""
-    },
-    {
-        "id": 5,
-        "titulo": "Teste",
-        "status": "pendente"
     }
 ]

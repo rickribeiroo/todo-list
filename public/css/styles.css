@@ -81,6 +81,28 @@ botao-adicionar {
   background: #2F2D37; 
   border-radius: 1000px;
   padding: 5px;
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-container input {
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #2F2D37;
+    background-color: #19191C;
+    color: white;
+    outline: none;
+}
+
+.search-container button {
+    padding: 10px 15px;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    background: #2F2D37;
+    color: #8583A0;
+    cursor: pointer;
 }
 .cabecalho-tarefas {
     display: flex;
@@ -108,6 +130,7 @@ botao-adicionar {
 }
 
 /* Css da página add_task */
+/* Pagina de adicionar tarefa */
 .form-adicionar {
     display: flex;
     flex-direction: column;
@@ -169,4 +192,5 @@ botao-adicionar {
 
 .btn-adicionar-form:hover {
     background-color: #6B46E1;
+}
 }
