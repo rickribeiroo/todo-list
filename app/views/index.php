@@ -5,7 +5,7 @@
     <title>TODO.list</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script>
         function confirmDelete(id) {
             if (confirm('Tem certeza que deseja excluir esta tarefa?')) {
