@@ -37,21 +37,18 @@ class TaskController {
     }
 
     public function update($id) {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $newStatus = $_POST['status'] ?? null;
-            $newDescription = $_POST['descricao'] ?? null;
-            $this->model->updateTask($id, $newStatus, $newDescription);
-            header("Location: /public/index.php");
-            exit;
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $newTitle = $_POST['titulo'] ?? null;
+        if ($newTitle) {
+            $this->model->updateTask($id, $newTitle);
         }
-    
-        $task = $this->model->getTaskById($id);
-        $statuses = $this->model->getStatuses();
-
-         $currentStatus = $task['status'] ?? 'Pendente';
-        $availableStatuses = $statuses;
-
-        require __DIR__ . '/../Views/tasks/update_task.php';
+        header("Location: /public/index.php");
+        exit;
     }
+
+    $task = $this->model->getTaskById($id);
+    require __DIR__ . '/../Views/tasks/update_task.php';
+}
+
 }
 ?>

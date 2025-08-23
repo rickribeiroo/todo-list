@@ -45,17 +45,17 @@ class TaskModel {
         file_put_contents($this->tasksFile, json_encode($tasks, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
     }
 
-    public function updateTask($id, $newStatus, $newDescription) {
-        $tasks = $this->getTasks();
-        foreach ($tasks as &$task) {
-            if ($task['id'] == $id) {
-                if ($newStatus !== null) $task['status'] = $newStatus;
-                if ($newDescription !== null) $task['descricao'] = $newDescription;
-                break;
-            }
+    public function updateTask($id, $newTitle) {
+    $tasks = $this->getTasks();
+    foreach ($tasks as &$task) {
+        if ($task['id'] == $id) {
+            $task['titulo'] = $newTitle;
+            break;
         }
-        file_put_contents($this->tasksFile, json_encode($tasks, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
     }
+    file_put_contents($this->tasksFile, json_encode($tasks, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+}
+
 
     public function getTaskById($id) {
         $tasks = $this->getTasks();
