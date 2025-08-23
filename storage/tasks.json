@@ -2,15 +2,8 @@
     {
         "id": 2,
         "titulo": "Finalizar protótipo no Figma",
-        "status": "Pendente",
+        "status": "Concluído",
         "descricao": "descricao"
-        
-    },
-    {
-        "id": 3,
-        "titulo": "Revisar código do projeto",
-        "status": "Pendente",
-        "descricao": ""
     },
     {
         "id": 4,
@@ -19,13 +12,13 @@
         "descricao": ""
     },
     {
-        "id": 5,
-        "titulo": "concluir ap1",
-        "status": "Pendente"
+        "id": 6,
+        "titulo": "testres",
+        "status": "Concluído"
     },
     {
-        "id": 6,
-        "titulo": "teste",
-        "status": "pendente"
+        "id": 7,
+        "titulo": "revisar código public\/index.php",
+        "status": "Concluído"
     }
 ]
