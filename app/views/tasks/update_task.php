@@ -10,9 +10,10 @@
 <body>
     <div class="task-container">
         <div class="task-card">
-            <form action="/public/index.php?action=update" method="POST">
-            <input type="hidden" name="id" value="<?= $task['id'] ?>">
-            <input type="hidden" id="statusInput" name="status" value="<?= $currentStatus ?>">
+           <form action="/public/index.php?action=update&id=<?= $task['id'] ?>" method="POST">
+    <input type="hidden" name="id" value="<?= $task['id'] ?>">
+    <input type="hidden" id="statusInput" name="status" value="<?= $currentStatus ?>">
+
             
             <div class="task-title"><?= $task['titulo'] ?></div>
 

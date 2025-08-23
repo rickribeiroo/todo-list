@@ -44,8 +44,13 @@ class TaskController {
             header("Location: /public/index.php");
             exit;
         }
+    
         $task = $this->model->getTaskById($id);
         $statuses = $this->model->getStatuses();
+
+         $currentStatus = $task['status'] ?? 'Pendente';
+        $availableStatuses = $statuses;
+
         require __DIR__ . '/../Views/tasks/update_task.php';
     }
 }
