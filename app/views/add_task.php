@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Adicionar Tarefa</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="título">
