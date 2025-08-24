@@ -55,6 +55,7 @@ li .botoes-li {
 li.done {
     text-decoration: line-through;
     color: gray;
+    opacity: 0.7; /* Diminui a opacidade em 30% */
 }
 
 .botoes{
@@ -72,7 +73,146 @@ button.concluir, button.editar, button.deletar {
     font-size: 18px;
     color: #8583A0;
 }
-
 button.deletar {
     color: #9994D6;
+}
+
+/* Corrigindo typo e integrando button.adicionar */
+button.adicionar {
+    color: white;
+    text-decoration: none;
+    background: #2F2D37;
+    border-radius: 1000px;
+    padding: 5px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-container input {
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #2F2D37;
+    background-color: #19191C;
+    color: white;
+    outline: none;
+}
+
+.search-container button {
+    padding: 10px 15px;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    background: #2F2D37;
+    color: #8583A0;
+    cursor: pointer;
+}
+
+/* Estilos adicionais para o botão concluir */
+button.concluir:hover {
+    color: #6A47D1; /* Cor ao passar o mouse, harmonizando com o tema */
+    transition: color 0.3s ease;
+}
+
+/* Garante que o ícone bi-circle seja visível e interativo */
+button.concluir i.bi-circle {
+    font-size: 18px; /* Ajuste o tamanho para consistência com outros botões */
+}
+
+/* Ajuste para li.pending para diferenciar visualmente de done */
+li.pending .info {
+    text-decoration: none;
+    color: #F9F9F9; /* Cor padrão para tarefas pendentes */
+}
+
+/* Estilos da branch remota */
+.cabecalho-tarefas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.btn-adicionar {
+    background-color: #805CF6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 1000px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-adicionar:hover {
+    background-color: #6B46E1;
+}
+
+/* Css da página add_task */
+.form-adicionar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-adicionar input {
+    background: #2F2D37;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-adicionar input::placeholder {
+    color: #8583A0;
+}
+
+.form-adicionar input:focus {
+    outline: 2px solid #805CF6;
+}
+
+.botoes-form {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.btn-cancelar {
+    background-color: transparent;
+    color: #9994D6;
+    border: 2px solid #9994D6;
+    padding: 12px 25px;
+    border-radius: 1000px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    transition: all 0.3s;
+}
+
+.btn-cancelar:hover {
+    background-color: #9994D6;
+    color: white;
+}
+
+.btn-adicionar-form {
+    background-color: #805CF6;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 1000px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.btn-adicionar-form:hover {
+    background-color: #6B46E1;
 }
