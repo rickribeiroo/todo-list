@@ -1,24 +1,23 @@
 [
     {
-        "id": 2,
-        "titulo": "Finalizar protótipo no Figma",
-        "status": "Concluído",
-        "descricao": "descricao"
-    },
-    {
         "id": 4,
-        "titulo": "Revisar código do projeto TODO.lisst",
+        "titulo": "Revisar código do projeto TODO.list",
         "status": "Pendente",
         "descricao": ""
     },
     {
         "id": 6,
-        "titulo": "testres",
-        "status": "Concluído"
+        "titulo": "teste",
+        "status": "Pendente"
     },
     {
         "id": 7,
         "titulo": "revisar código public\/index.php",
         "status": "Concluído"
+    },
+    {
+        "id": 8,
+        "titulo": "gravar video apresentando o projeto",
+        "status": "Pendente"
     }
 ]
